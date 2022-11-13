@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Blogger</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <%- include ('../partial/style') %>
+</head>
+<body>
+
+<%- include ('../partial/navBar') %>
+
+<!-- Start travel Area -->
+<section class="commentform-area  pb-120 pt-80 mb-100 travel-area ">
+    <div class="container">
+        <h2 class="text-uppercas pb-50">Edit</h2>
+        <form  method="post" enctype="multipart/form-data">
+            <div class="row flex-row d-flex">
+                <div class="col-lg-6">
+                    <input name="name" placeholder="Name" onfocus="this.placeholder = ''" value="<%=scenery.name%>"
+                           onblur="this.placeholder = 'Enter name'" class="common-input mb-20 form-control" required=""
+                           type="text">
+                    <input name="description"  placeholder="Description" onfocus="this.placeholder = ''" value="<%=scenery.description%>"
+                              class="common-input mb-20 form-control" required="" type="text">
+
+                    <img src="">
+                    <input name="image" class="common-input mb-20 form-control" required="" type="file">
+                </div>
+                <div class=" mb-20 form-control" style="border: none; margin-left: 3px">
+                    <select name="idCountry" required="">
+                        <option value="">Please choose an option</option>
+                        <% for( let i = 0; i < categories.length;i++){ %>
+                            <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="col-lg-6">
+                    <button class="primary-btn mt-20" type="submit">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- End travel Area -->
+
+<!-- Start team Area -->
+<%- include ('../partial/about-team') %>
+<!-- End team Area -->
+
+<!-- start footer.ejs Area -->
+<%- include ('../partial/footer') %>
+<!-- End footer.ejs Area -->
+
+<!-- script-->
+<%- include ('../partial/script') %>
+</body>
+</html>

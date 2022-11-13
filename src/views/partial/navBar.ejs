@@ -1,0 +1,105 @@
+<!-- Start Header Area -->
+<header class="default-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/img/logo.png" alt="">
+            </a>
+            <div class="col-lg-6  col-md-12">
+                <div class="single-footer-widget newsletter">
+                    <div id="mc_embed_signup">
+                        <form target="_blank" novalidate="true" method="post" class="form-inline" enctype="multipart/form-data">
+                            <div class="form-group row" style="width: 100%">
+                                <div class="col-lg-8 col-md-12">
+                                    <input name="name" placeholder="Search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'" required="" type="text" style="background:gainsboro">
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                    <button class="nw-btn primary-btn"  style="background:gainsboro" type="submit" formtarget="_self">SEARCH<span class="lnr lnr-arrow-right" ></span></button>
+                                </div>
+                            </div>
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#travel">Travel</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="/create">Create</a></li>
+                    <!-- Dropdown -->
+                    <li class="dropdown">
+                        <a class="" href="#" id="navbardrop" data-toggle="dropdown">
+                            Location
+                        </a>
+                        <div class="dropdown-menu">
+                            <% for (let i = 0;i < categories.length;i++){ %>
+                              <a class="dropdown-item" href="/category/<%=categories[i].id%>"><%=categories[i].name%></a>
+                           <%}%>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header Area -->
+
+<!-- start banner Area -->
+<section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="/img/header-bg.jpg">
+    <div class="overlay-bg overlay"></div>
+    <div class="container">
+        <div class="row fullscreen">
+            <div class="banner-content d-flex align-items-center col-lg-12 col-md-12">
+                <h1>
+                    Travel the world with us! <br>
+                </h1>
+            </div>
+            <div class="head-bottom-meta d-flex justify-content-between align-items-end col-lg-12">
+                <div class="col-lg-6 flex-row d-flex meta-left no-padding">
+                    <p><span class="lnr lnr-heart"></span> 15 Likes</p>
+                    <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+
+
+<!-- Start category Area -->
+<section class="category-area section-gap" id="news">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">
+                        OUTSTANDING PLACE IN VIETNAM
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="active-cat-carusel">
+            <div class="item single-cat">
+                <img src="/img/879aa0d98eab8913cdab628e0ba35be7.jpg" alt="" style="height: 424px">
+                <p class="date">10 Jan 2018</p>
+                <h4><a href="#">ITAP Turtle Tower at Hoan Kiem Lake, Hanoi</a></h4>
+            </div>
+            <div class="item single-cat">
+                <img src="/img/2018d8a633e89c16327fc26582be17d0.jpg" alt="" style="height: 424px">
+                <p class="date">15 Jan 2013</p>
+                <h4><a href="#">One Pillar Pagoda</a></h4>
+            </div>
+            <div class="item single-cat">
+                <img src="/img/e039ff64995659c47c86c10dfb665ebf.jpg" alt="" style="height: 424px">
+                <p class="date">10 Jan 2022</p>
+                <h4><a href="">Train Street in Hanoi, Vietnam 🇻🇳</a></h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End category Area -->
