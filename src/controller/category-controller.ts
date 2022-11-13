@@ -15,10 +15,15 @@ export class CategoryController {
         return category;
     }
     showFormCategoryCreate  = async (req, res )=>{
-        let category = await  this.categoryRepository.find()
-        res.render('/category/createC',{
-            category : category
+        let category = await this.categoryRepository.find()
+        res.render('category/createC',{
+            categories : category
         })
+    }
+    saveCategory = async (req: Request,res: Response) =>{
+        let category = req.body
+        await this.categoryRepository.save(category)
+        res.redirect(301,'/scenery')
     }
 
 }

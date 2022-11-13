@@ -9,6 +9,11 @@ class CategoryService {
             let category = await this.categoryRepository.find();
             return category;
         };
+        this.saveCategory = async (req, res) => {
+            let category = req.body;
+            await this.categoryRepository.save(category);
+            res.redirect(301, '/scenery');
+        };
         this.categoryRepository = data_source_1.AppDataSource.getRepository(category_1.Category);
         console.log('connect database!!!!');
     }

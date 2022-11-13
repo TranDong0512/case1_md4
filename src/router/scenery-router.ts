@@ -10,3 +10,5 @@ routerScenery.post('/edit/:id',sceneryController.editS)
 routerScenery.post('/scenery',sceneryController.searchS);
 routerScenery.get('/category/:id',sceneryController.searchCategory)
 routerScenery.post('/category',sceneryController.searchS)
+
+

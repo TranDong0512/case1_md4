@@ -53,6 +53,7 @@ export class SceneryController {
         res.render('scenery/list', {listScenery: scenery, categories: categories})
     }
 
+
 }
 
 export default new SceneryController()

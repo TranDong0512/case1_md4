@@ -11,9 +11,14 @@ class CategoryController {
         };
         this.showFormCategoryCreate = async (req, res) => {
             let category = await this.categoryRepository.find();
-            res.render('/category/createC', {
-                category: category
+            res.render('category/createC', {
+                categories: category
             });
+        };
+        this.saveCategory = async (req, res) => {
+            let category = req.body;
+            await this.categoryRepository.save(category);
+            res.redirect(301, '/scenery');
         };
         data_source_1.AppDataSource.initialize().then(connection => {
             this.categoryRepository = connection.getRepository(category_1.Category);
